@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DinoSnake</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="page">
+    <section class="hero card">
+        <p class="eyebrow">DinoSnake</p>
+        <h1>Chomp your way across the prehistoric grid.</h1>
+        <p>Steer the dino, gobble eggs to grow longer, and don't crash into the walls or your own tail.</p>
+    </section>
+
+    <section class="card stack">
+        <div class="row stats-row">
+            <div class="stat">
+                <p class="eyebrow">Score</p>
+                <p id="score" class="stat-value">0</p>
+            </div>
+            <div class="stat">
+                <p class="eyebrow">Best</p>
+                <p id="best" class="stat-value">0</p>
+            </div>
+            <button id="restart-button" class="secondary">Restart</button>
+        </div>
+
+        <p id="status-message" class="status hidden"></p>
+
+        <div class="board-wrap">
+            <canvas id="game-canvas" width="480" height="480" aria-label="DinoSnake game board"></canvas>
+        </div>
+
+        <p class="muted">Use arrow keys or WASD to move. On touch devices, use the pad below.</p>
+
+        <div class="dpad">
+            <button type="button" class="dpad-btn dpad-up" data-direction="up" aria-label="Move up">&#8593;</button>
+            <button type="button" class="dpad-btn dpad-left" data-direction="left" aria-label="Move left">&#8592;</button>
+            <button type="button" class="dpad-btn dpad-down" data-direction="down" aria-label="Move down">&#8595;</button>
+            <button type="button" class="dpad-btn dpad-right" data-direction="right" aria-label="Move right">&#8594;</button>
+        </div>
+    </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
