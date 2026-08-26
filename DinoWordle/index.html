@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DinoWordle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="page">
+    <section class="hero card">
+        <p class="eyebrow">DinoWordle</p>
+        <h1>Guess the dino-themed word in 6 tries.</h1>
+        <p>Every word is 5 letters and connected to dinosaurs and their prehistoric world. Green means the right spot, yellow means the letter is in the word but wrong spot, gray means it's not in the word.</p>
+    </section>
+
+    <section class="card stack">
+        <p id="message-banner" class="status hidden"></p>
+
+        <div id="board" class="board" aria-label="DinoWordle board"></div>
+
+        <div id="keyboard" class="keyboard" aria-label="On-screen keyboard"></div>
+
+        <div class="row stats-row">
+            <div class="stat">
+                <p class="eyebrow">Played</p>
+                <p id="stat-played" class="stat-value">0</p>
+            </div>
+            <div class="stat">
+                <p class="eyebrow">Win %</p>
+                <p id="stat-winpct" class="stat-value">0</p>
+            </div>
+            <div class="stat">
+                <p class="eyebrow">Streak</p>
+                <p id="stat-streak" class="stat-value">0</p>
+            </div>
+            <div class="stat">
+                <p class="eyebrow">Best streak</p>
+                <p id="stat-best" class="stat-value">0</p>
+            </div>
+        </div>
+
+        <div class="row action-row">
+            <button id="share-button" class="secondary hidden">Copy result</button>
+            <button id="new-word-button" class="secondary">New word</button>
+        </div>
+    </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
