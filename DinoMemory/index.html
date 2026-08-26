@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DinoMemory</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="page">
+    <section class="hero card">
+        <p class="eyebrow">DinoMemory</p>
+        <h1>Match the prehistoric pairs.</h1>
+        <p>Flip two cards at a time and find all 8 dino pairs hiding among the 16 cards. Fewer moves and less time means a better score.</p>
+    </section>
+
+    <section class="card stack">
+        <div class="row stats-row">
+            <div class="stat">
+                <p class="eyebrow">Moves</p>
+                <p id="moves" class="stat-value">0</p>
+            </div>
+            <div class="stat">
+                <p class="eyebrow">Time</p>
+                <p id="timer" class="stat-value">00:00</p>
+            </div>
+            <div class="stat">
+                <p class="eyebrow">Best</p>
+                <p id="best" class="stat-value">--</p>
+            </div>
+            <button id="restart-button" class="secondary">Restart</button>
+        </div>
+
+        <p id="win-message" class="status hidden"></p>
+
+        <div id="board" class="board" aria-label="Memory game board"></div>
+    </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

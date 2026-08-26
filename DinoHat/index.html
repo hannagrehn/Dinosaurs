@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DinoHat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="page">
+    <section class="hero card">
+        <p class="eyebrow">DinoHat</p>
+        <h1>Multiplayer hat game for weird little catchphrases.</h1>
+        <p>Create a room, give everyone one shared writing window to fill the hat, then keep the timer rolling while each player gets their shot to guess.</p>
+    </section>
+
+    <p id="global-message" class="status hidden"></p>
+
+    <section id="auth-section" class="card stack">
+        <h2>Get into a room</h2>
+        <div class="grid">
+            <form id="create-form" class="stack">
+                <label for="create-name">Your name</label>
+                <input id="create-name" name="playerName" maxlength="20" required>
+                <button type="submit">Create room</button>
+            </form>
+
+            <form id="join-form" class="stack">
+                <label for="join-name">Your name</label>
+                <input id="join-name" name="playerName" maxlength="20" required>
+                <label for="join-room">Room code</label>
+                <input id="join-room" name="roomCode" maxlength="5" required>
+                <button type="submit">Join room</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="room-section" class="hidden stack">
+        <div class="card stack">
+            <div class="row">
+                <div>
+                    <p class="eyebrow">Room</p>
+                    <h2 id="room-code">-----</h2>
+                </div>
+                <button id="leave-room" class="secondary">Leave room</button>
+            </div>
+            <p id="phase-label">Waiting in lobby.</p>
+            <p id="status-message" class="status"></p>
+        </div>
+
+        <section id="finished-panel" class="card stack hidden">
+            <p class="eyebrow">Stop screen</p>
+            <h3>Game finished</h3>
+            <p id="winner-summary" class="winner-summary"></p>
+            <p class="muted">Create a new room when you want another round.</p>
+        </section>
+
+        <section id="admin-panel" class="card stack hidden">
+            <div class="row">
+                <div>
+                    <p class="eyebrow">Admin window</p>
+                    <h3>Invite and moderate players</h3>
+                </div>
+                <span class="pill accent">host</span>
+            </div>
+            <label for="invite-link">Share this invite link</label>
+            <div class="inline-action">
+                <input id="invite-link" readonly>
+                <button id="copy-invite" type="button">Copy link</button>
+            </div>
+            <p class="muted">Room code: <strong id="invite-code"></strong></p>
+            <p class="muted">Kick buttons show up next to every non-host player.</p>
+        </section>
+
+        <div class="grid">
+            <section class="card stack">
+                <h3>Players</h3>
+                <ul id="players-list" class="players"></ul>
+            </section>
+
+            <section class="card stack">
+                <h3>Add a clue</h3>
+                <p class="muted">Each player can have up to 10 clues in the hat.</p>
+                <p id="countdown-label" class="countdown hidden"></p>
+                <form id="clue-form" class="stack">
+                    <label for="clue-text">What do they say a lot?</label>
+                    <textarea id="clue-text" name="clueText" rows="3" maxlength="120" required></textarea>
+                    <label for="target-player">Who says it?</label>
+                    <select id="target-player" name="targetPlayerId" required></select>
+                    <button type="submit">Drop it in the hat</button>
+                </form>
+                <button id="start-game" class="hidden">Start 30-second clue timer</button>
+            </section>
+        </div>
+
+        <section class="card stack">
+            <h3>Guess round</h3>
+            <p id="round-label"></p>
+            <div id="guess-panel" class="hidden stack">
+                <div class="clue-box">
+                    <p class="eyebrow">Live clue</p>
+                    <p id="active-clue"></p>
+                </div>
+                <form id="guess-form" class="stack">
+                    <label for="guess-player">Who says that?</label>
+                    <select id="guess-player" name="guessedPlayerId" required></select>
+                    <button type="submit">Submit guess</button>
+                </form>
+            </div>
+        </section>
+    </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
