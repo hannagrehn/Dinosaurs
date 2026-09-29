@@ -38,6 +38,7 @@ DinoMemory, DinoSnake, and DinoWordle are fully static and can be opened directl
 
 - `TRex.java` — an ASCII T-Rex that runs back and forth in your terminal.
 - `trex-ascii.txt` — a standalone ASCII T-Rex.
+- `velociraptor-ascii.txt` — a standalone ASCII Velociraptor, sickle claw and all.
 - `DinoWine.java` — a Java program.
 - `dinosaurs.txt` — quick facts about famous dinosaur species.
 - `highscore.txt` — a saved high score.
