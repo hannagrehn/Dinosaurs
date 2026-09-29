@@ -1,5 +1,14 @@
 # 🦖 Dinosaurs
 
+```
+                          __
+                         / _)
+                _.----._/ /
+               /         /
+            __/ (  | (  |
+           /__.-'|_|--|_|
+```
+
 A little arcade of prehistoric games and Java experiments, all dinosaur themed. Everything in this repo runs standalone — no build step, no dependencies, no server required (unless noted).
 
 ## Play the games
