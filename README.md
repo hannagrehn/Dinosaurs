@@ -22,6 +22,7 @@ Open [`index.html`](index.html) in your browser for a hub linking to everything 
 | [DinoSnake](DinoSnake/index.html) | Snake, but the head is a dinosaur. Chomp eggs, grow longer, don't hit the walls or your own tail. |
 | [DinoMan](DinoMan/index.html) | Pac-Man, but every creature is a dinosaur. Chomp eggs, dodge raptors, and turn the tables with power eggs. |
 | [DinoWordle](DinoWordle/index.html) | Wordle with a prehistoric twist — guess the 5-letter dino-world word in 6 tries. |
+| [DinoWine](DinoWine/index.html) | Chrome-dino-style runner where you balance a wine glass and jump cacti. A desktop [Java program](#dinowine-desktop-game) — runs standalone, outside the browser. |
 
 ### DinoHat server
 
@@ -33,7 +34,18 @@ javac DinoHat.java
 java DinoHat
 ```
 
-DinoMemory, DinoSnake, and DinoWordle are fully static and can be opened directly as files — no server needed.
+DinoMemory, DinoSnake, DinoMan, and DinoWordle are fully static and can be opened directly as files — no server needed.
+
+### DinoWine (desktop game)
+
+`DinoWine.java` is a standalone Java Swing desktop game, not a browser page. Compile and run it from the repo root:
+
+```powershell
+javac DinoWine.java
+java DinoWine
+```
+
+A game window opens directly — no browser or server involved. See [`DinoWine/index.html`](DinoWine/index.html) for controls.
 
 ## Other dino stuff
 
@@ -41,7 +53,6 @@ DinoMemory, DinoSnake, and DinoWordle are fully static and can be opened directl
 - `trex-ascii.txt` — a standalone ASCII T-Rex.
 - `velociraptor-ascii.txt` — a standalone ASCII Velociraptor, sickle claw and all.
 - `pterodactyl-ascii.txt` — a standalone ASCII Pterodactyl, wings spread wide.
-- `DinoWine.java` — a Java program.
 - `dinosaurs.txt` — quick facts about famous dinosaur species.
 - `highscore.txt` — a saved high score.
 
